@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Trained — Agility Club</title>
+  <meta name="description" content="Step-by-step guide to getting trained in the Agility Innovation Zone: waiver, Moodle, in-person training and equipment booking. 3D printers are walk-in.">
+  <meta name="theme-color" content="#0d110f">
+  <meta property="og:title" content="Agility Club — University of Lethbridge">
+  <meta property="og:description" content="A student-led club for makers, artists, founders and the curious. In collaboration with the Agility Program.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d110f'/><circle cx='16' cy='16' r='9' fill='none' stroke='%23e2ab6f' stroke-width='1.5'/><circle cx='16' cy='16' r='4' fill='%238fd3b2'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span>Agility Club</a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="training.html" aria-current="page">Get Trained</a>
+        <a href="team.html">Our Team</a>
+        <a href="collaborate.html">For Organizations</a>
+        <a class="nav-join btn btn-primary" data-link="join" href="#">Become a member</a>
+      </nav>
+      <a class="btn btn-primary btn-small header-join" data-link="join" href="#">Become a member</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
+
+    <main id="main">
+    <section class="hero compact">
+      <canvas class="topo" data-topo="1.2" data-seed="12" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="hero-eyebrow">
+          <span class="mono">Training guide · Innovation Zone</span>
+          <span class="mono" data-zone-status style="color:var(--text)">Mon–Fri 10:30–4:30</span>
+        </div>
+        <h1 class="display">Get trained. <em>Start making.</em></h1>
+        <p class="lead">From your first visit to booking a machine, in plain steps. Tick each step off as you finish it; your progress is saved in this browser.</p>
+      </div>
+    </section>
+
+    <section class="section tight" aria-label="Before you start" style="padding-top:0">
+      <div class="wrap">
+        <div class="prereqs reveal">
+          <div><span class="mono">Who</span><p>Current U of L students and employees</p></div>
+          <div><span class="mono">Use</span><p>Your <strong>@uleth.ca</strong> email for everything</p></div>
+          <div><span class="mono">Where &amp; when</span><p>SA6304, Science Commons · Mon–Fri, 10:30–4:30</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="choose-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="mono">01 — Choose a track</span>
+          <div><h2 class="h2" id="choose-title">What do you want <em>to use?</em></h2></div>
+        </div>
+
+        <div class="tracks" role="tablist" aria-label="Training tracks">
+          <button role="tab" id="tab-3d" aria-controls="panel-3d" aria-selected="true" data-hash="3d-printers">3D printers: walk-in</button>
+          <button role="tab" id="tab-all" aria-controls="panel-all" aria-selected="false" data-hash="other-equipment" tabindex="-1">Laser cutters &amp; everything else</button>
+        </div>
+
+        <!-- 3D PRINTER TRACK -->
+        <div class="track-panel" id="panel-3d" role="tabpanel" aria-labelledby="tab-3d">
+          <div class="track-intro">
+            <h2 class="h3">The fast track. <em>No Moodle needed.</em></h2>
+            <div class="progress" aria-live="polite">
+              <div class="mono"><span>Your progress</span><span data-progress-text>0 / 4</span></div>
+              <div class="progress-bar"><i></i></div>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div>
+                <h3>Sign this year's waiver</h3>
+                <p>Everyone signs a new Innovation Zone waiver each academic year. It's an online form and takes about five minutes. Sign it with your @uleth.ca email.</p>
+                <div class="meta"><span class="mono">≈ 5 min</span><span class="mono">Online · once a year</span></div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="waiver" href="https://www.ulethbridge.ca/agility/innovation-zone">Sign the waiver <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="t3d-1"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div>
+                <h3>Walk in during open hours</h3>
+                <p>Come to SA6304 in the Science Commons any weekday between 10:30 am and 4:30 pm. You don't need an appointment or a Moodle course. Tell the staff you'd like 3D printer training.</p>
+                <div class="meta"><span class="mono">In person · SA6304</span><span class="mono" data-zone-status>Mon–Fri 10:30–4:30</span></div>
+              </div>
+              <label class="check"><input type="checkbox" id="t3d-2"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div>
+                <h3>Get trained &amp; certified on the spot</h3>
+                <p>Agility staff will show you how to set up, start and look after a print. When you're done you're certified on the Prusa printers.</p>
+                <div class="meta"><span class="mono">In person · with Agility staff</span></div>
+              </div>
+              <label class="check"><input type="checkbox" id="t3d-3"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">4</span>
+              <div>
+                <h3>Book a printer and make something</h3>
+                <p>Once you're certified, reserve a printer in the Innovation Zone booking system. There may be limits on how long and how often you can book, so everyone gets a turn.</p>
+                <div class="meta"><span class="mono">Online · anytime</span></div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="booking" href="https://www.ulethbridge.ca/agility/innovation-zone">Open the booking system <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="t3d-4"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+          </ol>
+
+          <div class="finish" hidden>
+            <p><span class="accent" style="font-size:24px">You're certified.</span>&nbsp; Want to meet other makers? Come to a club event.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-ochre btn-small" data-link="join" href="#">Join the club</a><button class="btn btn-small" data-reset>Reset</button></div>
+          </div>
+        </div>
+
+        <!-- GENERAL EQUIPMENT TRACK -->
+        <div class="track-panel" id="panel-all" role="tabpanel" aria-labelledby="tab-all" hidden>
+          <div class="track-intro">
+            <h2 class="h3">Laser cutters, resin printers, <em>&amp; the rest.</em></h2>
+            <div class="progress" aria-live="polite">
+              <div class="mono"><span>Your progress</span><span data-progress-text>0 / 5</span></div>
+              <div class="progress-bar"><i></i></div>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div>
+                <h3>Sign this year's waiver</h3>
+                <p>A new Innovation Zone waiver is needed every academic year. Sign it with your @uleth.ca email. If you already signed it this year for 3D printing, skip this step.</p>
+                <div class="meta"><span class="mono">≈ 5 min</span><span class="mono">Online · once a year</span></div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="waiver" href="https://www.ulethbridge.ca/agility/innovation-zone">Sign the waiver <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="tall-1"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div>
+                <h3>Join the Innovation Zone Moodle course &amp; finish the orientation</h3>
+                <p>Enrol yourself in the Innovation Zone course on Moodle and complete the orientation. After you enrol, the course is listed under your <strong>Long Term</strong> courses in Moodle.</p>
+                <div class="meta"><span class="mono">Online · Moodle</span><span class="mono">Once, ever</span></div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="moodle" href="https://www.ulethbridge.ca/agility/innovation-zone">Open the Moodle course <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="tall-2"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div>
+                <h3>Complete the training module for your machine</h3>
+                <p>In the same Moodle course, choose the equipment you want, such as the laser cutter or sewing machine. Finish its module and read and acknowledge its Lab Hazard Assessment. You only do each module once.</p>
+                <div class="meta"><span class="mono">Online · Moodle</span><span class="mono">Once per machine</span></div>
+              </div>
+              <label class="check"><input type="checkbox" id="tall-3"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">4</span>
+              <div>
+                <h3>Request your in-person training</h3>
+                <p>Fill in the short request form and Agility staff will schedule a hands-on session with you. You can't book a machine until this session is done.</p>
+                <div class="meta"><span class="mono">Online form → in person</span></div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="inPersonTraining" href="https://www.ulethbridge.ca/agility/innovation-zone">Request in-person training <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="tall-4"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">5</span>
+              <div>
+                <h3>Book the equipment</h3>
+                <p>Once you're trained, reserve your machine in the booking system.</p>
+                <div class="note">Laser cutters (xTool, Glowforge, LaserPecker), resin printers and the Prusa XL need staff to approve each booking, so book ahead.</div>
+                <div class="step-actions"><a class="btn btn-primary btn-small" data-link="booking" href="https://www.ulethbridge.ca/agility/innovation-zone">Open the booking system <span class="arrow">↗</span></a></div>
+              </div>
+              <label class="check"><input type="checkbox" id="tall-5"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="#0d110f" stroke-width="2"><path d="M2 6.5 5 9l5-6"/></svg></span>Done</label>
+            </li>
+          </ol>
+
+          <div class="finish" hidden>
+            <p><span class="accent" style="font-size:24px">You're cleared to build.</span>&nbsp; Bring your project to a club event.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-ochre btn-small" data-link="join" href="#">Join the club</a><button class="btn btn-small" data-reset>Reset</button></div>
+          </div>
+        </div>
+
+        <p class="fine" style="margin-top:28px">Training, certification and bookings are run by the <a class="text-link" data-link="innovationZone" href="https://www.ulethbridge.ca/agility/innovation-zone">Agility Program</a>, not the club. If something here doesn't match their page, follow theirs. For booking or training problems, email <a class="text-link" href="mailto:agility@uleth.ca">agility@uleth.ca</a>.</p>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="mono">02 — Questions</span>
+          <div><h2 class="h2" id="faq-title">Good to <em>know.</em></h2></div>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I have to redo all of this every year?</summary>
+            <div class="answer">No. Only the waiver is yearly. The Moodle orientation and each equipment module are done once, and in-person training is done once per type of machine.</div>
+          </details>
+          <details>
+            <summary>Is the club the one training me?</summary>
+            <div class="answer">No. Agility staff do all training and certification. The club runs events and can help you get started, but it can't sign you off on equipment.</div>
+          </details>
+          <details>
+            <summary>Can I use the Zone for a class project or a side business?</summary>
+            <div class="answer">Class work and personal projects are fine, and so is small-scale prototyping. The Zone can't be used for personal financial gain or high-volume production.</div>
+          </details>
+          <details>
+            <summary>Can I bring my own materials or filament?</summary>
+            <div class="answer">Sometimes. Personal materials have to be approved by Innovation Zone staff first, so ask before you bring them in.</div>
+          </details>
+          <details>
+            <summary>Can I work in the Zone after 4:30 or on weekends?</summary>
+            <div class="answer">Only with an Extended Hours Access card. Ask the Innovation Zone Coordinator about it.</div>
+          </details>
+          <details>
+            <summary>I'm not a student or employee. Can I use the machines?</summary>
+            <div class="answer">The Innovation Zone is only open to current U of L students and employees. Community members are welcome to join the club and come to our events.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="rules-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="mono">03 — Zone rules</span>
+          <div>
+            <h2 class="h2" id="rules-title">The short version.</h2>
+            <p class="lead">Breaking a rule can lose you access to the Zone, for a while or for good.</p>
+          </div>
+        </div>
+        <ul class="rules reveal">
+          <li>Only use machines you've been trained and approved on.</li>
+          <li>Stay with any equipment you're running.</li>
+          <li>No weapons of any kind, including props and toys.</li>
+          <li>Personal tools and materials need staff approval.</li>
+          <li>Clean up and put everything back where it goes.</li>
+          <li>Don't waste or take raw materials or equipment.</li>
+          <li>Small-scale prototyping only. No personal financial gain.</li>
+          <li>No harassment, discrimination or bullying.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span>Agility Club</a>
+          <p>An independent, student-led club at the University of Lethbridge, ratified by the ULSU and working in collaboration with the Agility Program. We don't speak for the Agility Program.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="training.html">Get trained</a></li>
+            <li><a href="team.html">Our team</a></li>
+            <li><a href="collaborate.html">For organizations</a></li>
+            <li><a data-link="join" href="#">Become a member</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a data-link="clubEmail" href="mailto:agility.club@uleth.ca">agility.club@uleth.ca</a></li>
+            <li><a data-link="instagram" href="https://www.instagram.com/ulethagilityclub/">Instagram</a></li>
+            <li><a data-link="discord" href="#">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Agility Program</h4>
+          <ul>
+            <li><a data-link="agility" href="https://www.ulethbridge.ca/agility">Agility website</a></li>
+            <li><a data-link="innovationZone" href="https://www.ulethbridge.ca/agility/innovation-zone">Innovation Zone</a></li>
+            <li><a data-link="booking" href="https://www.ulethbridge.ca/agility/innovation-zone">Book equipment</a></li>
+            <li><a data-link="workshops" href="https://www.ulethbridge.ca/agility/workshops-and-events">Agility events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>The University of Lethbridge is located on the traditional territory of the Blackfoot Confederacy. We honour the Blackfoot people and their traditional ways of knowing in caring for this land, as well as all Indigenous peoples who have helped shape and continue to strengthen our University community.</p>
+        <p>© <span data-year>2026</span> Agility Club · University of Lethbridge<br>4401 University Drive, Lethbridge, AB T1K 3M4</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
