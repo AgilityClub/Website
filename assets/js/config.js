@@ -94,7 +94,7 @@ window.AGILITY_CLUB = {
       major: "Accounting",
       role: "VP Finance",
       email: "arlind.kuqi@uleth.ca",
-      photo: "",
+      photo: "assets/team/arlind.png",
       contactFor: ["Sponsorships & funding", "Member reimbursements"],
     },
     {
@@ -114,7 +114,7 @@ window.AGILITY_CLUB = {
       major: "Pre-Education",
       role: "Communications Director",
       email: "nestor.fuentesmajano@uleth.ca",
-      photo: "",
+      photo: "assets/team/nestor.png",
       contactFor: ["Media, social & promotion", "Newsletter & event features"],
     },
   ],
