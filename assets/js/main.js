@@ -306,6 +306,7 @@
       "<div>" +
         '<span class="mono" style="color:var(--jade)">' + esc(li.role || "Agility Staff Liaison") + "</span>" +
         '<h3 class="h3">' + esc(li.name) + "</h3>" +
+        (li.major ? '<p class="study">' + esc(li.major) + "</p>" : "") +
         '<div class="badges"><span class="badge">Advisor</span></div>' +
         "<p>Our link to the Agility Innovation Zone and a key part of our team. " + esc(li.name.split(" ")[0]) +
         " helps line our events up with Agility's goals and advises on anything that uses the Zone's equipment.</p>" +

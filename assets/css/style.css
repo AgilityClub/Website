@@ -904,7 +904,9 @@ em, .accent { font-family: var(--serif); font-style: italic; color: var(--ochre)
 .plate-caption .mono:first-child { white-space: nowrap; }
 .plate-caption .mono:last-child { text-align: right; }
 .plate h3 { font-family: var(--serif); font-size: 30px; line-height: 1.1; margin: 8px 0 10px; }
-.plate .study { margin: -4px 0 12px; font-size: 15px; color: var(--muted); }
+.plate .study,
+.liaison .study { margin: -4px 0 12px; font-size: 15px; color: var(--muted); }
+.liaison .study { margin-top: 6px; }
 .plate .study span { color: var(--faint); }
 .plate .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: -2px 0 14px; }
 .badge {

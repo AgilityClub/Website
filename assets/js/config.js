@@ -38,6 +38,7 @@ window.AGILITY_CLUB = {
   */
   liaison: {
     name: "Nicole Brink",
+    major: "Computer Science graduate",
     role: "Agility Staff Liaison",
     email: "nicole.brink@uleth.ca",
     photo: "",
@@ -90,7 +91,7 @@ window.AGILITY_CLUB = {
       id: "vp-finance",
       name: "Arlind Kuqi",
       year: 3,
-      major: "Finance",
+      major: "Accounting",
       role: "VP Finance",
       email: "arlind.kuqi@uleth.ca",
       photo: "",
@@ -109,8 +110,8 @@ window.AGILITY_CLUB = {
     {
       id: "communications",
       name: "Nestor Fuentes",
-      year: "",  // TODO: add Nestor's year & major
-      major: "",
+      year: 1,
+      major: "Pre-Education",
       role: "Communications Director",
       email: "nestor.fuentesmajano@uleth.ca",
       photo: "",
