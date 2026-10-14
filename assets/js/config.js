@@ -90,7 +90,7 @@ window.AGILITY_CLUB = {
     {
       id: "vp-finance",
       name: "Arlind Kuqi",
-      year: 3,
+      year: 2,
       major: "Accounting",
       role: "VP Finance",
       email: "arlind.kuqi@uleth.ca",
