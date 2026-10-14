@@ -18,7 +18,7 @@ window.AGILITY_CLUB = {
     instagram: "https://www.instagram.com/ulethagilityclub/",
     clubEmail: "agility.club@uleth.ca",
 
-    /* ---------- Agility Program links (owned by the University) ---------- */
+    /* ---------- Agility Program links (run by Agility, not the club) ---------- */
     agility: "https://www.ulethbridge.ca/agility",
     innovationZone: "https://www.ulethbridge.ca/agility/innovation-zone",
     workshops: "https://www.ulethbridge.ca/agility/workshops-and-events",
