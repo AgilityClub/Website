@@ -270,6 +270,9 @@
           '<figure class="plate-photo' + (m.photo ? "" : " empty") + '">' + photo + "</figure>" +
           '<div class="plate-caption"><span class="mono">Plate ' + ROMAN[i] + '</span><span class="mono" style="color:var(--ochre)">' + esc(m.role) + "</span></div>" +
           "<h3>" + esc(m.name) + "</h3>" +
+          ((m.year || m.major)
+            ? '<p class="study">' + [m.year ? "Year " + esc(m.year) : "", esc(m.major || "")].filter(Boolean).join('<span aria-hidden="true"> · </span>') + "</p>"
+            : "") +
           ((m.badges && m.badges.length)
             ? '<div class="badges">' + m.badges.map(function (b) { return '<span class="badge">' + esc(b) + "</span>"; }).join("") + "</div>"
             : "") +
@@ -287,6 +290,28 @@
       el.style.transitionDelay = (i % 3) * 90 + "ms";
       if (ro) ro.observe(el); else el.classList.add("in");
     });
+  }
+
+  /* ---------- Agility Staff Liaison ---------- */
+  var liaisonEl = document.getElementById("liaison");
+  var li = CFG.liaison;
+  if (liaisonEl && li && li.name) {
+    liaisonEl.innerHTML =
+      '<figure class="plate-photo' + (li.photo ? "" : " empty") + '">' +
+        '<canvas data-topo="0.45" data-seed="71" aria-hidden="true"></canvas>' +
+        (li.photo
+          ? '<img src="' + esc(li.photo) + '" alt="Portrait of ' + esc(li.name) + '" loading="lazy">'
+          : '<span class="plate-initials" aria-hidden="true">' + esc(initials(li.name)) + "</span>") +
+      "</figure>" +
+      "<div>" +
+        '<span class="mono" style="color:var(--jade)">' + esc(li.role || "Agility Staff Liaison") + "</span>" +
+        '<h3 class="h3">' + esc(li.name) + "</h3>" +
+        '<div class="badges"><span class="badge">Advisor</span></div>' +
+        "<p>Our link to the Agility Innovation Zone and a key part of our team. " + esc(li.name.split(" ")[0]) +
+        " helps line our events up with Agility's goals and advises on anything that uses the Zone's equipment.</p>" +
+        (li.email ? '<a class="email-link text-link" href="' + mailto(li.email) + '">' + esc(li.email) + "</a>" : "") +
+      "</div>";
+    liaisonEl.querySelectorAll("canvas[data-topo]").forEach(function (c) { new Topo(c); });
   }
 
   /* ---------- contact routing: <span data-contact="vp-finance"> ---------- */
