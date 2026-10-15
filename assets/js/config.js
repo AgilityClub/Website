@@ -41,7 +41,7 @@ window.AGILITY_CLUB = {
     major: "Computer Science graduate",
     role: "Agility Staff Liaison",
     email: "nicole.brink@uleth.ca",
-    photo: "",
+    photo: "assets/team/nicole.png",
   },
 
   /* ---------- Executive team ----------
@@ -73,7 +73,7 @@ window.AGILITY_CLUB = {
       badges: ["Co-Founder"],
       role: "Co-President",
       email: "ibrahima@uleth.ca",
-      photo: "",
+      photo: "assets/team/ahmed.png",
       contactFor: ["General club inquiries", "Club programming"],
     },
     {
@@ -84,7 +84,7 @@ window.AGILITY_CLUB = {
       badges: ["Co-Founder"],
       role: "VP Community Coordinator",
       email: "andrew.tiet@uleth.ca",
-      photo: "",
+      photo: "assets/team/andrew.png",
       contactFor: ["Collaborations with organizations & clubs", "Community outreach"],
     },
     {
@@ -104,7 +104,7 @@ window.AGILITY_CLUB = {
       major: "Computer Science",
       role: "Secretary",
       email: "n.ghehalot@uleth.ca",
-      photo: "",
+      photo: "assets/team/nitya.png",
       contactFor: ["Membership & attendance", "Meeting schedules"],
     },
     {
