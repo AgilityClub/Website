@@ -315,6 +315,77 @@
     liaisonEl.querySelectorAll("canvas[data-topo]").forEach(function (c) { new Topo(c); });
   }
 
+  /* ---------- Student Showcase ---------- */
+  var showcaseEl = document.getElementById("showcase-grid");
+  if (showcaseEl) {
+    var items = CFG.showcase || [];
+    var html = items.map(function (s, i) {
+      var people = s.people || [];
+      var names = people.map(function (p) { return p.name; });
+      var nameLine = names.length > 1 ? names.slice(0, -1).join(", ") + " & " + names[names.length - 1] : names[0] || "";
+      var majors = people.map(function (p) { return p.major; }).filter(Boolean);
+      var uniqueMajors = majors.filter(function (m, k) { return majors.indexOf(m) === k; });
+
+      var work = s.workPhoto
+        ? '<img src="' + esc(s.workPhoto) + '" alt="' + esc(s.workAlt || s.title) + '" loading="lazy">'
+        : '<canvas data-topo="0.9" data-seed="' + (i * 11.7 + 5) + '" aria-hidden="true"></canvas>' +
+          '<span class="work-placeholder">Project photo coming soon</span>';
+
+      var faces = people.map(function (p) {
+        return '<span class="face">' + (p.photo
+          ? '<img src="' + esc(p.photo) + '" alt="' + esc(p.name) + '">'
+          : '<span aria-hidden="true">' + esc(initials(p.name)) + "</span>") + "</span>";
+      }).join("");
+
+      var href = s.link
+        ? esc(s.link)
+        : mailto(L.clubEmail, s.contactSubject || ("About " + s.title),
+            "Hi Agility Club,\n\nI'd like to get in touch with " + nameLine + " about " + s.title + ".\n\nName:\nMessage:\n");
+      var ext = s.link ? ' target="_blank" rel="noopener"' : "";
+      var cta = '<a class="btn btn-primary btn-small" href="' + href + '"' + ext + ">" +
+        esc(s.linkLabel || (s.link ? "See their work" : "Get in touch")) + ' <span class="arrow">' + (s.link ? "↗" : "→") + "</span></a>";
+
+      return (
+        '<article class="exhibit reveal" id="' + esc(s.id || "") + '">' +
+          '<figure class="exhibit-work">' + work +
+            (s.status ? '<span class="exhibit-status">' + esc(s.status) + "</span>" : "") +
+          "</figure>" +
+          '<div class="exhibit-body">' +
+            '<div class="exhibit-people"><div class="faces' + (people.length > 1 ? " many" : "") + '">' + faces + "</div>" +
+              '<div><span class="exhibit-names">' + esc(nameLine) + "</span>" +
+              (uniqueMajors.length ? '<span class="exhibit-major">' + esc(uniqueMajors.join(" · ")) + "</span>" : "") + "</div></div>" +
+            '<span class="mono exhibit-no">Exhibit ' + (i < 9 ? "0" : "") + (i + 1) + "</span>" +
+            '<h3 class="exhibit-title">' + esc(s.title) + "</h3>" +
+            '<p class="exhibit-hook">' + esc(s.hook) + "</p>" +
+            '<div class="exhibit-cta">' + cta + "</div>" +
+          "</div>" +
+        "</article>"
+      );
+    }).join("");
+
+    // "This could be you" closing card
+    html +=
+      '<article class="exhibit exhibit-you reveal">' +
+        '<div class="you-mark" aria-hidden="true"><span>+</span></div>' +
+        '<span class="mono exhibit-no">Exhibit ' + (items.length < 9 ? "0" : "") + (items.length + 1) + "</span>" +
+        '<h3 class="exhibit-title">This could be <em>you.</em></h3>' +
+        '<p class="exhibit-hook">Made something you\'re proud of? A print, an app, a costume, a startup, a song with a 3D-printed instrument? Get in touch and show off what you\'ve created.</p>' +
+        '<div class="exhibit-cta">' +
+          '<a class="btn btn-ochre btn-small" href="' + mailto(L.clubEmail, "Showcase my project",
+            "Hi Agility Club,\n\nI'd love to be featured in the Student Showcase.\n\nName:\nProgram & year:\nProject title:\nOne line about it:\nLink (website, Instagram, portfolio...):\n\nI'll attach a photo of me and one of my project.\n") +
+          '">Show off your work <span class="arrow">→</span></a>' +
+          '<a class="btn btn-small" data-link-join href="' + esc(L.join || "#") + '" target="_blank" rel="noopener">Join the club</a>' +
+        "</div>" +
+      "</article>";
+
+    showcaseEl.innerHTML = html;
+    showcaseEl.querySelectorAll("canvas[data-topo]").forEach(function (c) { new Topo(c); });
+    showcaseEl.querySelectorAll(".reveal").forEach(function (el, k) {
+      el.style.transitionDelay = (k % 2) * 90 + "ms";
+      if (ro) ro.observe(el); else el.classList.add("in");
+    });
+  }
+
   /* ---------- contact routing: <span data-contact="vp-finance"> ---------- */
   document.querySelectorAll("[data-contact]").forEach(function (el) {
     var ids = el.getAttribute("data-contact").split(",");
